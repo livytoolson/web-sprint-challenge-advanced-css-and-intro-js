@@ -236,6 +236,7 @@ function getArtistByIndex(array, index) {
 function get20s(data){
   for(let i = 0; i < data.length; i++){
     if (data[i].years <= 2000 && data[i].years >= 1900){
+      years = data[i].years.split(" - ")
       console.log(data[i].name);
     } // if statement
   } // for loop
