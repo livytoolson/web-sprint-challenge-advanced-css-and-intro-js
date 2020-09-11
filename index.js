@@ -248,15 +248,12 @@ function get20s(){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-// function removeArtist(arr, number) {
-//   var index = arr.indexOf(number);
-//   while (index > -1) {
-//     arr.splice(index, 1);
-//     index = arr.indexOf(number)
-//   }
-// }
-// removeArtist(artists, 0)
-// console.log(artists.length)
+
+function removeArtist(array, index){
+  array.splice(index, 1)[0];
+  console.log(array.length)
+}
+removeArtist(artists, 0)
   
  
 
@@ -287,10 +284,10 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(array){
-  for(let i = 0; i < array.length; i++){
-    if (array.paintings > 100)
-    return (array.name)
+function lotsOfArt(artArray){
+  for(let i = 0; i < artArray.length; i++){
+    if (artArray.paintings > 100)
+    return (artArray.name)
   }
 }
 lotsOfArt(artists)
